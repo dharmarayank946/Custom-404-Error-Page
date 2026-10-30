@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Demonstration homepage showcasing custom 404 error handling built with pure HTML5 and CSS3.">
+  <title>Homepage - Custom 404 Demonstration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page-body">
+  
+  <!-- Site Header & Navigation -->
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main Navigation">
+      <a href="index.html" class="logo-brand">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+          <path d="M2 12h20"/>
+        </svg>
+        <span>Web Project</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="404.html" class="nav-link btn-nav">View 404 Page</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Hero Demonstration Card -->
+  <main class="home-main" role="main">
+    <section class="home-hero-card" aria-labelledby="home-title">
+      <span class="home-badge">Static Demonstration</span>
+      <h1 id="home-title" class="home-title">Welcome to the Homepage</h1>
+      <p class="home-description">
+        This is the demonstration homepage for the custom 404 error handling experience. 
+        You can test the custom error page navigation and verify the <strong>Back to Home</strong> button below.
+      </p>
+
+      <!-- Testing Actions -->
+      <div class="home-actions">
+        <a href="404.html" class="btn btn-primary" id="btn-test-404">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <span>Test Custom 404 Page</span>
+        </a>
+
+        <a href="missing-page.html" class="btn btn-secondary" id="btn-simulate-404">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+          <span>Simulate Broken Link</span>
+        </a>
+      </div>
+
+      <div class="demo-guidance">
+        <p>
+          On GitHub Pages, any unmatched or broken URL automatically serves <code>404.html</code>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <p class="footer-copy">Built with semantic HTML5 and modern CSS3 &bull; Lightweight &bull; Zero JavaScript</p>
+  </footer>
+
+</body>
+</html>

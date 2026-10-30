@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Oops! The page you're looking for can't be found. Return safely to our homepage.">
+  <title>404 - Page Not Found</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="error-page-body">
+  <main class="error-wrapper" role="main">
+    <div class="error-container">
+      
+      <!-- Creative Illustration (Pastel Blue & Lavender Accents) -->
+      <div class="illustration-container" aria-hidden="true">
+        <svg class="error-illustration" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decorative error illustration of a floating paper airplane and compass">
+          <!-- Background Glow & Stars -->
+          <circle cx="160" cy="110" r="95" fill="url(#bgGlow)" />
+          <circle cx="48" cy="46" r="4" fill="#C4B5FD" class="sparkle s1" />
+          <circle cx="282" cy="72" r="3.5" fill="#7DD3FC" class="sparkle s2" />
+          <circle cx="68" cy="170" r="3" fill="#BAE6FD" class="sparkle s3" />
+          <circle cx="264" cy="160" r="4.5" fill="#DDD6FE" class="sparkle s4" />
+          
+          <!-- Dashed Flight / Search Trail -->
+          <path d="M 40 165 C 80 190, 110 140, 160 135 C 210 130, 225 80, 260 70" 
+                stroke="#C4B5FD" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round" />
+
+          <!-- Floating Island / Cloud Base -->
+          <path d="M 85 170 C 85 158 98 150 112 150 C 118 142 128 136 142 136 C 158 136 170 145 175 152 C 182 148 192 148 198 154 C 208 152 218 158 220 168 C 228 170 234 176 234 184 C 234 194 224 200 214 200 L 98 200 C 88 200 85 192 85 184 Z" 
+                fill="#F5F3FF" stroke="#EDE9FE" stroke-width="2" />
+
+          <!-- Mini Pastel Planet -->
+          <circle cx="70" cy="80" r="18" fill="url(#planetGrad)" />
+          <ellipse cx="70" cy="80" rx="26" ry="6" stroke="#93C5FD" stroke-width="2" transform="rotate(-20 70 80)" stroke-dasharray="38 6" />
+
+          <!-- Floating Paper Airplane (Vector Group) -->
+          <g class="floating-craft">
+            <!-- Main wing / body -->
+            <polygon points="195,50 255,75 180,95" fill="url(#planeMainGrad)" />
+            <!-- Fold bottom -->
+            <polygon points="195,50 225,82 180,95" fill="url(#planeFoldGrad)" />
+            <!-- Center crease highlight -->
+            <polygon points="195,50 255,75 225,82" fill="#FFFFFF" fill-opacity="0.6" />
+            <!-- Shadow underneath -->
+            <ellipse cx="205" cy="115" rx="30" ry="6" fill="#C4B5FD" fill-opacity="0.3" class="craft-shadow" />
+          </g>
+
+          <!-- Gradients Definitions -->
+          <defs>
+            <radialGradient id="bgGlow" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+              <stop offset="0%" stop-color="#E0F2FE" stop-opacity="0.7"/>
+              <stop offset="60%" stop-color="#EDE9FE" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="planetGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#C4B5FD"/>
+              <stop offset="100%" stop-color="#7DD3FC"/>
+            </linearGradient>
+            <linearGradient id="planeMainGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#38BDF8"/>
+              <stop offset="100%" stop-color="#818CF8"/>
+            </linearGradient>
+            <linearGradient id="planeFoldGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0284C7"/>
+              <stop offset="100%" stop-color="#6366F1"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Prominent 404 Heading -->
+      <div class="error-code-wrapper">
+        <span class="badge-status">Error Code</span>
+        <h1 class="error-code" aria-label="Error 404">404</h1>
+      </div>
+
+      <!-- Friendly Message & Informational Copy -->
+      <div class="error-content">
+        <h2 class="error-title">Oops! The page you're looking for can't be found.</h2>
+        <p class="error-message">
+          The link you followed may be broken, or the page may have been moved, removed, or never existed in the first place.
+        </p>
+      </div>
+
+      <!-- Action Button / Navigation -->
+      <nav class="error-actions" aria-label="Error page recovery options">
+        <a href="index.html" class="btn btn-primary" id="btn-back-home">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span>Back to Home</span>
+        </a>
+      </nav>
+
+      <!-- Useful Secondary Navigation Tips -->
+      <footer class="error-footer">
+        <p class="footer-tip">
+          Lost? Return to our <a href="index.html" class="footer-link">homepage</a> or verify the web address you entered.
+        </p>
+      </footer>
+
+    </div>
+  </main>
+</body>
+</html>

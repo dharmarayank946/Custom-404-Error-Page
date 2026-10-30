@@ -1,0 +1,556 @@
+/* ==========================================================================
+   Custom 404 Error Page & Homepage Stylesheet
+   Modern, Minimal, Light Theme with Pastel Blue & Lavender Accents
+   ========================================================================== */
+
+/* Design Tokens & CSS Custom Properties */
+:root {
+  /* Surface & Background Colors */
+  --bg-page: #ffffff;
+  --bg-surface: #fafbff;
+  --bg-subtle: #f1f5f9;
+
+  /* Typography / Text Colors */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+
+  /* Soft Pastel Blue Accents */
+  --pastel-blue-50: #f0f9ff;
+  --pastel-blue-100: #e0f2fe;
+  --pastel-blue-200: #bae6fd;
+  --pastel-blue-300: #7dd3fc;
+  --pastel-blue-400: #38bdf8;
+  --pastel-blue-600: #0284c7;
+  --pastel-blue-700: #0369a1;
+
+  /* Soft Pastel Lavender Accents */
+  --pastel-lavender-50: #faf5ff;
+  --pastel-lavender-100: #f5f3ff;
+  --pastel-lavender-200: #ede9fe;
+  --pastel-lavender-300: #ddd6fe;
+  --pastel-lavender-400: #c4b5fd;
+  --pastel-lavender-500: #a78bfa;
+  --pastel-lavender-600: #8b5cf6;
+  --pastel-lavender-700: #6d28d9;
+
+  /* Subtle Gradient Accents */
+  --grad-404: linear-gradient(135deg, #0284c7 0%, #8b5cf6 100%);
+  --grad-btn: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
+  --grad-btn-hover: linear-gradient(135deg, #0369a1 0%, #6d28d9 100%);
+
+  /* Borders & Shadows */
+  --border-light: #e2e8f0;
+  --border-lavender: #ede9fe;
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-btn: 0 4px 14px 0 rgba(2, 132, 199, 0.22);
+  --shadow-btn-hover: 0 8px 20px 0 rgba(124, 58, 237, 0.28);
+  --shadow-card: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+
+  /* Radii & Dimensions */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Styles & Box Sizing Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   404 Custom Error Page Layout: Centered Vertically & Horizontally
+   ========================================================================== */
+.error-page-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px 20px;
+  background: radial-gradient(circle at 50% 20%, #f0f9ff 0%, #fbfbfe 50%, #ffffff 100%);
+}
+
+.error-wrapper {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   Creative Vector Illustration & Subtle Floating Effects
+   ========================================================================== */
+.illustration-container {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin-bottom: 8px;
+  user-select: none;
+}
+
+.error-illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Gentle floating animation for the paper craft */
+.floating-craft {
+  animation: floatCraft 4.2s ease-in-out infinite;
+  transform-origin: 215px 75px;
+}
+
+.craft-shadow {
+  animation: pulseShadow 4.2s ease-in-out infinite;
+  transform-origin: 205px 115px;
+}
+
+@keyframes floatCraft {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(2deg);
+  }
+}
+
+@keyframes pulseShadow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(0.85);
+    opacity: 0.16;
+  }
+}
+
+/* Sparkle elements */
+.sparkle {
+  animation: sparkleTwinkle 3s ease-in-out infinite alternate;
+}
+
+.s1 { animation-delay: 0.2s; }
+.s2 { animation-delay: 0.8s; }
+.s3 { animation-delay: 1.4s; }
+.s4 { animation-delay: 2.0s; }
+
+@keyframes sparkleTwinkle {
+  0% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* ==========================================================================
+   Prominent 404 Typography
+   ========================================================================== */
+.error-code-wrapper {
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.badge-status {
+  display: inline-block;
+  padding: 3px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--pastel-lavender-700);
+  background-color: var(--pastel-lavender-100);
+  border: 1px solid var(--pastel-lavender-200);
+  border-radius: var(--radius-pill);
+  margin-bottom: 6px;
+}
+
+.error-code {
+  font-size: clamp(4.8rem, 14vw, 7.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0;
+  color: var(--pastel-blue-600);
+  background: var(--grad-404);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   Friendly Message & Readable Copy
+   ========================================================================== */
+.error-content {
+  max-width: 520px;
+  margin-bottom: 28px;
+}
+
+.error-title {
+  font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.error-message {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Back to Home Button
+   ========================================================================== */
+.error-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  padding: 13px 30px;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+
+.btn-primary {
+  background: var(--grad-btn);
+  color: #ffffff;
+  box-shadow: var(--shadow-btn);
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  background: var(--grad-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn-hover);
+  color: #ffffff;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:focus-visible {
+  outline: 3px solid var(--pastel-blue-300);
+  outline-offset: 3px;
+}
+
+.btn-icon {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.btn-primary:hover .btn-icon {
+  transform: translateX(-3px);
+}
+
+/* Secondary Footer Tips */
+.error-footer {
+  margin-top: 8px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-lavender);
+  max-width: 440px;
+  width: 100%;
+}
+
+.footer-tip {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.footer-link {
+  color: var(--pastel-blue-600);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--pastel-lavender-700);
+}
+
+/* ==========================================================================
+   Demonstration Homepage Styles (index.html)
+   ========================================================================== */
+.home-page-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border-light);
+  background-color: #ffffff;
+}
+
+.nav-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--pastel-blue-600);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--pastel-blue-600);
+  background-color: var(--pastel-blue-50);
+}
+
+.nav-link.btn-nav {
+  background-color: var(--pastel-lavender-100);
+  color: var(--pastel-lavender-700);
+  border: 1px solid var(--pastel-lavender-200);
+  font-weight: 600;
+}
+
+.nav-link.btn-nav:hover {
+  background-color: var(--pastel-lavender-200);
+  color: var(--pastel-lavender-700);
+}
+
+/* Homepage Hero */
+.home-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  background: radial-gradient(circle at 50% 10%, #f0f9ff 0%, #fcfbfe 60%, #ffffff 100%);
+}
+
+.home-hero-card {
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
+  padding: 44px 36px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.home-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--pastel-blue-700);
+  background-color: var(--pastel-blue-100);
+  border: 1px solid var(--pastel-blue-200);
+  border-radius: var(--radius-pill);
+  margin-bottom: 18px;
+}
+
+.home-title {
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+
+.home-description {
+  font-size: 1.08rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 0 auto 32px;
+}
+
+.home-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.btn-secondary {
+  background-color: var(--pastel-lavender-100);
+  color: var(--pastel-lavender-700);
+  border: 1px solid var(--pastel-lavender-200);
+}
+
+.btn-secondary:hover {
+  background-color: var(--pastel-lavender-200);
+  color: var(--pastel-lavender-700);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.demo-guidance {
+  padding-top: 24px;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border-light);
+  background-color: #ffffff;
+  padding: 22px 24px;
+  text-align: center;
+}
+
+.footer-copy {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Accessibility: Reduced Motion Preference
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .floating-craft,
+  .craft-shadow,
+  .sparkle {
+    animation: none !important;
+  }
+
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 768px) {
+  .error-page-body {
+    padding: 24px 16px;
+  }
+
+  .home-hero-card {
+    padding: 32px 20px;
+  }
+
+  .illustration-container {
+    max-width: 270px;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 4.5rem;
+  }
+
+  .error-title {
+    font-size: 1.3rem;
+  }
+
+  .error-message {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 13px 20px;
+  }
+
+  .home-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .home-actions .btn {
+    width: 100%;
+  }
+
+  .nav-container {
+    padding: 14px 18px;
+  }
+}
